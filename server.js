@@ -1,5 +1,4 @@
-const express = require('express')
-const app = express()
+const app = require('./src/config/custom-express')
 
 const port = 3030
 const localhost = ''
