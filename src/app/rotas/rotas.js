@@ -18,14 +18,24 @@ module.exports = (app)=>{
 
         const bookDao = new BookDao(db)
 
-        bookDao.list(function (err, results) {
-            res.marko(
-                require('../views/books/listing/listing.marko'),
-                {
-                    books: results
-                } 
-            )
-        } )
+        bookDao.list()
+        
+        .then( books => res.marko(
+            require('../views/books/listing/listing.marko'),
+            {
+                books: results
+            } 
+        ))
+        .catch( err =>  console.log(err) )
+                
+        // bookDao.list(function (err, results) {
+        //     res.marko(
+        //         require('../views/books/listing/listing.marko'),
+        //         {
+        //             books: results
+        //         } 
+        //     )
+        // } )
 
     }) 
 
