@@ -11,7 +11,13 @@ module.exports = (app)=>{
     }) 
     app.get('/books',(req,res) =>{
         res.marko(
-            require('../views/books/listing/listing.marko')     
+            require('../views/books/listing/listing.marko'),
+            {
+                books:[
+                    { id: 1, title: 'JavaScript' },
+                    { id: 2, title: 'MERN Stack' } 
+                ]
+            }
         )
     }) 
 
