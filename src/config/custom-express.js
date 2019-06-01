@@ -1,4 +1,7 @@
 const express = require('express')
-const App = express()
+const app = express()
 
-module.exports = App
+const rotas = require('../app/rotas/rotas')
+rotas(app)
+
+module.exports = app
