@@ -16,12 +16,12 @@
                     <th>Title</th>
                 </thead>
                 <tbody>
-                    <for | book | of=data.books )>
-                        <tr>
+                    <!-- <for | book | of=data.books> -->
+                        <tr for(book in data.books)>
                             <td>${ book.id }</td>
                             <td>${ book.titulo }</td>
                         </tr>
-                    </for>
+                    <!-- </for> -->
                 </tbody>
             </table> 
         </section>
