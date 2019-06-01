@@ -9,5 +9,10 @@ module.exports = (app)=>{
             `
         )
     }) 
+    app.get('/books',(req,res) =>{
+        res.marko(
+            require('../views/books/listing/listing.marko')     
+        )
+    }) 
 
 }
