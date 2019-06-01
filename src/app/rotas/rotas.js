@@ -4,7 +4,7 @@ module.exports = (app)=>{
         res.send(
             `
             <html>
-                <h1>Caiu no /</h1>
+                <h1>Caiu na rota /</h1>
             </html>
             `
         )
