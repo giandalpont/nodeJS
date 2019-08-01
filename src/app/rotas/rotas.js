@@ -23,7 +23,7 @@ module.exports = (app)=>{
         .then( books => res.marko(
             require('../views/books/listing/listing.marko'),
             {
-                books: results
+                books: books
             } 
         ))
         .catch( err =>  console.log(err) )
