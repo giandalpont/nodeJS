@@ -1,4 +1,7 @@
 /node_modules
-rest/node_modules
-started/node_modules
 .DS_Store
+
+rest/node_modules
+rest/package-lock.json
+
+started/node_modules
